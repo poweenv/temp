@@ -1,0 +1,21 @@
+# class 파일은 제외
+*.class
+index.txt
+...
+Hello.txt
+test1.txt
+# 확장자가 .a인 파일 무시
+*.a
+# 윗 라인에 확장자가 a인 파일은 무시했지만 lib.a 는 무시하고 싶지 않음
+!lib.a
+#현재 디렉토리에 있는 TOOD파일은 무시하고 subdir/TOOD 처럼 하위 디렉토리에 있는 파일은 무시하지 않음
+/TOOD
+
+#bulid 디렉토리에 있는 모든 파일은 무시
+bulid/
+
+#doc 폴더 아래에 있는 txt 파일 무시
+doc/*.txt
+
+#doc 폴더 아래에 모든 .pdf 파일 무시(doc/server/1.pdf)doc 밑에 어떤 폴더든 아래에 속한 모든 폴더를 무시하려면
+doc/**/*.pdf
