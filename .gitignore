@@ -19,3 +19,33 @@ doc/*.txt
 
 #doc 폴더 아래에 모든 .pdf 파일 무시(doc/server/1.pdf)doc 밑에 어떤 폴더든 아래에 속한 모든 폴더를 무시하려면
 doc/**/*.pdf
+
+파일 무시하기: .gitignore
+ 추적하지 않을 파일들에 대해서 기록
+ 처음에 하는 것이 좋음
+
+변경된 파일에 대한 상세 정보 보기
+git diff : 워킹 디렉토리(modified)에 있는 것과 staging area 에 있는 것과 비교
+git diff --staged : staging area 에 넣은 파일(git add가 끝난)의 변경부분을 보고 싶은 경우
+
+branch
+  기본 branch : master(main)
+  git branch 브랜치명 : 새로운 브랜치 생성
+  git branch : 현재 존재하는 모든 브랜치 조회
+  git checkout 처음할때 : 이동할 당시 commit 이 완료된 상태의 파일들이 모두 복사됨
+  git checkout 브랜치명 : 두번째부터는 이동의 개념만 존재함
+  git merge(병합) 합칠 브랜드명 : branch + branch
+  git branch -d 브랜치명 : 브랜치 삭제
+  git commit --amend : 직전 커밋 되돌리기-커밋메세지 추정, 파일을 추가해서 커밋을 하고 싶을때
+CONFLICT (content) : Merge conflict(충돌)
+
+ 원격저장소: github/gitlab
+ 로컬저장소:
+ 
+ git clone 복제할주소 : 프로젝트 복사
+ git remote -v : 현재 프로젝트와 연동된 원격저장소 주소 확인. 
+origin(원격저장소 별칭) https: github.com/schacon/ticgit
+git remote add 원격저장소 별칭 원격저장소주소
+
+로컬저장소==> 원격저장소 : push
+git push -u origin master
